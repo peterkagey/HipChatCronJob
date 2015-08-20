@@ -22,3 +22,8 @@ If you want to send a message to someone else, change the USER_NAME field in the
 
 ### Result
 If—by some miracle—everything works, then  every day at 2:00 you will automatically send [Michael Zemel](https://github.com/mzemel) a message asking how his day is going!
+
+### Send Michael a HipChat from the command line.
+Run `ruby send_message.rb "your message here"` to send Michael a message from the command line. Better yet, add an alias to your .bash_profile:
+
+`alias hey_mike="ruby /path/to/HipChatCronJob/send_message.rb"`
