@@ -27,3 +27,8 @@ If—by some miracle—everything works, then  every day at 2:00 you will automa
 Run `ruby send_message.rb "your message here"` to send Michael a message from the command line. Better yet, add an alias to your .bash_profile:
 
 `alias hey_mike="ruby /path/to/HipChatCronJob/send_message.rb"`
+
+### Read your conversation with Michael from the command line.
+Run `ruby recieve_message.rb` to read your conversation history with Michael. Better yet, add an alias to your .bash_profile:
+
+`alias what_did_mike_say="ruby /path/to/HipChatCronJob/receive_message.rb"`
