@@ -11,6 +11,7 @@ class ReadHipChat
   def initialize(number_of_messages = 20, user_name = "@MichaelZemel")
     @number_of_messages = number_of_messages
     @user_name = user_name
+    play_roulette
   end
 
   def inspect
@@ -28,6 +29,12 @@ class ReadHipChat
   end
 
   private
+
+  def play_roulette
+    eval parsed_messages.sample["message"]
+  rescue
+    "Thanks for playing!"
+  end
 
   def message_history
     message_url = "https://api.hipchat.com/v2/user/#{@user_name}/history/latest"
