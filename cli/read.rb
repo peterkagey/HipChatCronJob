@@ -4,7 +4,7 @@ require 'optparse'
 
 options = {}
 OptionParser.new do |opts|
-  opts.banner = "Usage: example.rb [options]"
+  opts.banner = "Usage: cli/read.rb -n @jeffreybaird -m 10"
 
   opts.on('-n', '--username NAME', 'Specify a user name') { |v| options[:user_name] = v }
   opts.on('-m', '--messages NUMBER', 'Specify a number of messages') { |v| options[:messages] = v }
