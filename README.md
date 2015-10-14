@@ -26,9 +26,15 @@ If you want to send a message to someone else, just add their name to your .bash
 If—by some miracle—everything works, then every day at 2:00 you will automatically send [Michael Zemel](https://github.com/mzemel) a message asking how his day is going!
 
 ### Send Michael a HipChat from the command line.
-Run `ruby send_message.rb "your message here"` to send Michael a message from the command line. Better yet, add an alias to your .bash_profile:
+Run `ruby cli/send.rb  "your message here"` to send Michael a message from the command line. Better yet, add an alias to your .bash_profile:
 `alias hey_mike="ruby /path/to/HipChatCronJob/cli/send.rb"`
 
+### Send anyone a HipChat message from the command line.
+Run `ruby cli/send.rb -n #{user_name} "your message here"` to send a message. Don't forget to include the '@'!
+
 ### Read your conversation with Michael from the command line.
-Run `ruby recieve_message.rb` to read your conversation history with Michael. Better yet, add an alias to your .bash_profile:
+Run `ruby cli/read.rb` to read your conversation history with Michael. Better yet, add an alias to your .bash_profile:
 `alias what_did_mike_say="ruby /path/to/HipChatCronJob/cli/read.rb"`
+
+### Read your conversation with anyone from the command line.
+Run `ruby cli/read.rb -n {user_name}` to read your conversation history with that person. You can specify the number of messages with -m
