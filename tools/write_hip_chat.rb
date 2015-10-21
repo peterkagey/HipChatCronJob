@@ -16,10 +16,10 @@ class WriteHipChat
   end
 
   def self.message_url
-    "https://api.hipchat.com/v2/user/#{self.user_name}/message"
+    "https://api.hipchat.com/v2/user/#{user_name}/message"
   end
 
-  def self.send(message,user_name=nil)
+  def self.send(message)
     uri = URI.parse("#{self.message_url}#{AUTH_TOKEN}")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
