@@ -3,7 +3,7 @@ Here's to never forgetting to ask Michael how his day is going.
 
 ## Setup
 ### Generate a HipChat access token
-Log into your [HipChat account](https://www.hipchat.com/account/api), select "Send Notification" in the scope, give it a label, and hit "create".
+Log into your [HipChat account](https://www.hipchat.com/account/api), select "Send Message" in the scope, give it a label, and hit "create".
 
 ### Set that environment variable
 Next save the HipChat token into an environment variable in your .bash_profile (or wherever you keep these things):
