@@ -12,7 +12,7 @@ class WriteHipChat
   end
 
   def self.user_name
-     (@user_name || ENV["HIPCHAT_RECIPIENT"]) || "@MichaelZemel"
+    @user_name || ENV["HIPCHAT_RECIPIENT"] || "@MichaelZemel"
   end
 
   def self.message_url
