@@ -28,7 +28,8 @@ class WriteHipChat
     request = Net::HTTP::Post.new(uri.request_uri)
     request.add_field('Content-Type', 'application/json')
     request.body = {'message' => "#{message}"}.to_json
-    puts request.body
-    http.request(request)
+    puts "Attempting to send: '#{message}'"
+    response = http.request(request)
+    puts response.body ? response.body : "Message successfully sent!"
   end
 end
